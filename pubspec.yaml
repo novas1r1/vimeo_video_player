@@ -5,21 +5,25 @@ repository: https://github.com/Mindinventory/vimeo_video_player
 issue_tracker: https://github.com/Mindinventory/vimeo_video_player/issues
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
-  flutter: ">=3.16.0" # Build using this version
+  sdk: ">=3.2.0 <4.0.0"
+  flutter: ">=3.19.2" # Build using this version
 
 dependencies:
   flutter:
     sdk: flutter
 
-  dio: ^5.4.1
-  flick_video_player: ^0.7.0
-  video_player: ^2.8.2
+  dio: ^5.4.3
+  # https://github.com/GeekyAnts/flick-video-player/pull/255
+  flick_video_player:
+    git:
+      url: https://github.com/h1amza/flick-video-player.git
+      ref: master
+  video_player: ^2.8.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
